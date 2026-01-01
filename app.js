@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
 import categoryRouter from "./routes/categories.js";
+import itemRouter from "./routes/items.js";
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.set("views", path.join(__dirname, "./views"));
 app.set("view engine", "ejs");
 
 app.use("/", categoryRouter);
+app.use("/items", itemRouter);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, (err) => {
