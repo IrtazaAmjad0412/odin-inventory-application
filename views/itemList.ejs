@@ -11,8 +11,17 @@
       <% items.forEach((item) => { %>
       <div class="item-card">
         <h2><%= item.name %></h2>
+        <a href="/categories/<%= categoryId %>/items/<%= item.id %>/edit">Edit</a>
+        <form
+          action="/categories/<%= categoryId %>/items/<%= item.id %>/delete"
+          method="post"
+        >
+          <button type="submit">Delete</button>
+        </form>
       </div>
       <% }) %>
     </div>
+    <a href="/categories/<%= categoryId %>/items/new">Add a new item</a>
+    <a href="/categories">Back to Categories</a>
   </body>
 </html>

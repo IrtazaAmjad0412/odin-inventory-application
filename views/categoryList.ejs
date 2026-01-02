@@ -12,8 +12,14 @@
       <div class="category-card">
         <h2><%= category.name %></h2>
         <p><%= category.description %></p>
+        <a href="/categories/<%= category.id %>/items">View Items</a>
+        <a href="/categories/<%= category.id %>/edit">Edit</a>
+        <form action="/categories/<%= category.id %>/delete" method="post">
+          <button type="submit">Delete</button>
+        </form>
       </div>
       <% }) %>
     </div>
+    <a href="/categories/new">Add a new category</a>
   </body>
 </html>

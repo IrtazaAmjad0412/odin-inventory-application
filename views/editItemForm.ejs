@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="/categories/<%= categoryId %>/items/<%= item.id %>/edit" method="post">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= item.name %>" required />
+      <label for="calories">Calories:</label>
+      <input
+        type="number"
+        name="calories"
+        id="calories"
+        value="<%= item.calories %>"
+        required
+      />
+      <label for="carbs">Carbs:</label>
+      <input type="number" name="carbs" id="carbs" value="<%= item.carbs %>" required />
+      <label for="fats">Fats:</label>
+      <input type="number" name="fats" id="fats" value="<%= item.fats %>" required />
+      <label for="proteins">Proteins:</label>
+      <input
+        type="number"
+        name="proteins"
+        id="proteins"
+        value="<%= item.proteins %>"
+        required
+      />
+      <button type="submit">Update Item</button>
+    </form>
+    <a href="/categories/<%= categoryId %>/items">Back to Items</a>
+  </body>
+</html>
