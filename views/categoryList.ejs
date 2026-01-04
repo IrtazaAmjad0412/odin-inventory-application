@@ -4,22 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <h1><%= title %></h1>
     <div class="category-list">
       <% categories.forEach((category) => { %>
       <div class="category-card">
-        <h2><%= category.name %></h2>
+        <div class="card-top-row">
+          <h2><%= category.name %></h2>
+          <div class="card-actions">
+            <a href="/categories/<%= category.id %>/items">View Items</a>
+            <a href="/categories/<%= category.id %>/edit">Edit</a>
+            <form action="/categories/<%= category.id %>/delete" method="post">
+              <button type="submit">Delete</button>
+            </form>
+          </div>
+        </div>
         <p><%= category.description %></p>
-        <a href="/categories/<%= category.id %>/items">View Items</a>
-        <a href="/categories/<%= category.id %>/edit">Edit</a>
-        <form action="/categories/<%= category.id %>/delete" method="post">
-          <button type="submit">Delete</button>
-        </form>
       </div>
       <% }) %>
     </div>
-    <a href="/categories/new">Add a new category</a>
+    <div class="link">
+      <a href="/categories/new">Add a new category</a>
+    </div>
   </body>
 </html>
