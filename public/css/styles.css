@@ -46,6 +46,7 @@ a:hover {
   gap: 0.5rem;
   width: 70%;
   padding: 1.5rem;
+  border-radius: 0.25rem;
   border: 2px solid #000000;
 }
 
@@ -61,8 +62,27 @@ a:hover {
   padding: 0.5rem 0rem;
 }
 
-.link {
+.links {
   display: flex;
   justify-content: center;
   margin-top: 2.5rem;
+  gap: 1rem;
+}
+
+.item-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 15%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #000000;
 }
