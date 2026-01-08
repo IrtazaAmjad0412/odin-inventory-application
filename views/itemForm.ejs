@@ -4,22 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <h1><%= title %></h1>
-    <form action="/categories/<%= categoryId %>/items" method="post">
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" required />
-      <label for="calories">Calories:</label>
-      <input type="number" name="calories" id="calories" required />
-      <label for="carbs">Carbs:</label>
-      <input type="number" name="carbs" id="carbs" required />
-      <label for="fats">Fats:</label>
-      <input type="number" name="fats" id="fats" required />
-      <label for="proteins">Proteins:</label>
-      <input type="number" name="proteins" id="proteins" required />
-      <button type="submit">Create Item</button>
-    </form>
-    <a href="/categories/<%= categoryId %>/items">Back to Items</a>
+    <div class="form">
+      <form action="/categories/<%= categoryId %>/items" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+        <label for="calories">Calories:</label>
+        <input type="number" name="calories" id="calories" required />
+        <label for="carbs">Carbs:</label>
+        <input type="number" name="carbs" id="carbs" required />
+        <label for="fats">Fats:</label>
+        <input type="number" name="fats" id="fats" required />
+        <label for="proteins">Proteins:</label>
+        <input type="number" name="proteins" id="proteins" required />
+        <button type="submit">Create Item</button>
+      </form>
+    </div>
+    <div class="links">
+      <a href="/categories/<%= categoryId %>/items">Back to Items</a>
+    </div>
   </body>
 </html>
