@@ -4,23 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <h1><%= title %></h1>
-    <form action="/categories" method="post">
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" required />
-      <label for="description">Description:</label>
-      <textarea
-        name="description"
-        id="description"
-        rows="5"
-        cols="30"
-        placeholder="Enter description..."
-        required
-      ></textarea>
-      <button type="submit">Create Category</button>
-    </form>
-    <a href="/categories">Back to Categories</a>
+    <div class="form">
+      <form action="/categories" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+        <label for="description">Description:</label>
+        <textarea
+          name="description"
+          id="description"
+          rows="5"
+          cols="30"
+          placeholder="Enter description..."
+          required
+        ></textarea>
+        <button type="submit">Create Category</button>
+      </form>
+    </div>
+    <div class="links">
+      <a href="/categories">Back to Categories</a>
+    </div>
   </body>
 </html>
