@@ -5,6 +5,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  background-color: #7e8282;
+}
+
 h1 {
   margin: 1rem 2rem;
 }
