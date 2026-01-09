@@ -11,19 +11,21 @@ body {
 
 h1 {
   margin: 1rem 2rem;
+  color: #2f7f7a;
 }
 
 h2 {
   font-weight: normal;
+  color: #2f7f7a;
 }
 
 p {
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 button,
 a {
-  color: #551a8b;
+  color: #832ad5;
   font-size: 1rem;
   text-decoration: none;
   background: none;
