@@ -38,6 +38,15 @@ a:hover {
   text-decoration: underline;
 }
 
+label {
+  color: #2f7f7a;
+}
+
+input,
+textarea {
+  color: rgb(0, 0, 0, 0.6);
+}
+
 .category-list {
   display: flex;
   flex-direction: column;
